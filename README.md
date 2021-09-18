@@ -14,4 +14,12 @@ node scripts/sample-script.js
 npx hardhat help
 
 npx hardhat run scripts/deploy.js --network ropsten
+
+npx hardhat console --network ropsten
+
+const Box = await ethers.getContractFactory("Box");
+const box = await Box.attach("XXXXXXXXXXXXXXXXXXXXXXXX");
+(await box.retrieve()).toString();
+
+
 ```
